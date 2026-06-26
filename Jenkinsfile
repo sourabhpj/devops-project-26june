@@ -16,7 +16,8 @@ pipeline {
             steps {
                 sh 'docker stop sourabh-container || true'
                 sh 'docker rm sourabh-container || true'
-                sh 'docker run -d container --name sourabh-container -p 80:80 sourabh-image'
+                sh 'docker run -d --name sourabh-container -p 80:80 sourabh-image'
+
             }
         }
     }
